@@ -1,22 +1,27 @@
+require("dotenv").config({ path: "./.env" });
 const express = require("express");
-const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
+
+const app = express();
+const port = process.env.PORT || 5001;
+
 
 
 //importing the profile route
 const profileRoutes = require("./routes/profile");
+const loginRoutes = require('./routes/login')
+const registerRoutes = require('./routes/register')
+
 
 app.use(cors());
 app.use(express.json());
 
-require("dotenv").config({ path: "./.env" });
-const port = process.env.PORT || 5001;
-
-//app.get('/ping', (req, res) => res.send('pong'))
 
 //using the route
 app.use("/", profileRoutes);
+app.use('/login', loginRoutes)
+app.use('/register', registerRoutes)
 
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -28,3 +33,5 @@ mongoose
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app
