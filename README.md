@@ -15,6 +15,7 @@ yarn install
 ```
 yarn start
 ```
+Add your MONGO_URI in a .env file.
 
 ## React
 
@@ -24,3 +25,4 @@ yarn install
 ```
 yarn dev
 ```
+
