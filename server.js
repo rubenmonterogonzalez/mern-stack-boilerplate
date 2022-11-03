@@ -10,7 +10,7 @@ const profileRoutes = require("./routes/profile");
 app.use(cors());
 app.use(express.json());
 
-require("dotenv").config({ path: "./config.env" });
+require("dotenv").config({ path: "./.env" });
 const port = process.env.PORT || 5001;
 
 //app.get('/ping', (req, res) => res.send('pong'))
