@@ -7,10 +7,18 @@ git clone < url >
 
 ##Express
 
+```
 yarn install
+```
+```
 yarn start
+```
 
 ##React
 
+```
 yarn install
+```
+```
 yarn dev
+```
