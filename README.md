@@ -1,11 +1,11 @@
-#MERN STACK Boilerplate
+# MERN STACK Boilerplate
 
 Minimal approach to start using MERN.
 React is created with Vite.
 
 git clone < url >
 
-##Express
+## Express
 
 ```
 yarn install
@@ -14,7 +14,7 @@ yarn install
 yarn start
 ```
 
-##React
+## React
 
 ```
 yarn install
